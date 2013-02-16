@@ -3,7 +3,7 @@
        DATA DIVISION.
        LOCAL-STORAGE SECTION.
        01 User-String  PIC A(50).
-       01 Converted-String  PIC A(50).
+       01 EncKey          PIC 99.
        01 Alpha.
            05 Alphabet-Strings.
                10 FILLER PIC A(26) VALUE "abcdefghijklmnopqrstuvwxyz".
@@ -36,11 +36,13 @@
                10 Alpha-String OCCURS 26 TIMES PIC A(26).
        PROCEDURE DIVISION.
            ACCEPT User-String FROM ARGUMENT-VALUE
+           ACCEPT EncKey FROM ARGUMENT-VALUE
+           ADD 1 TO EncKey
            SET User-String TO FUNCTION LOWER-CASE (User-String)
            DISPLAY  "input = ", User-String
            INSPECT User-String
-               CONVERTING Alpha-String(1) TO Alpha-String(26)
-           DISPLAY "converted = ", User-String
+               CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
+           DISPLAY "output = ", User-String
 
 
            STOP RUN.
