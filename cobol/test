@@ -1,0 +1,3 @@
+#!/bin/sh
+cobc -x ceaser-cipher.cob
+./ceaser-cipher "IBM"
