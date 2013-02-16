@@ -5,3 +5,4 @@ if <str> == "Hello",
 
 output = IFMMP
 
+"table" == array
