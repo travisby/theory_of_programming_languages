@@ -23,7 +23,7 @@ def main():
         print make_str(str_name, alphabet, wraparound_str(alphabet, i))
 
     for i in range(len(alphabet)):
-        print '10 EL%(num)s PIC A(26) VALUE IS "%(alph)s".' % {'alph': wraparound_str(alphabet, i), 'num': i}
+        print '10 FILLER PIC A(26) VALUE "%(alph)s".' % {'alph': wraparound_str(alphabet, i), 'num': i}
 
 
 main()
