@@ -9,3 +9,7 @@ if <str> == "Hello",
 output = IFMMP
 
 "table" == array
+
+
+
+I have an encryption method at hour 3.
