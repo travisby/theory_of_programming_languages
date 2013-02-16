@@ -35,6 +35,7 @@
            05 FILLER REDEFINES Alphabet-Strings.
                10 Alpha-String OCCURS 26 TIMES PIC A(26).
        PROCEDURE DIVISION.
+       Begin.
            ACCEPT User-String FROM ARGUMENT-VALUE
            ACCEPT EncKey FROM ARGUMENT-VALUE
            ADD 1 TO EncKey
@@ -43,6 +44,4 @@
            INSPECT User-String
                CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
            DISPLAY "output = ", User-String
-
-
            STOP RUN.
