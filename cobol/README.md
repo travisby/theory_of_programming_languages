@@ -1,3 +1,8 @@
+How to use:
+    Compile by using ./test (which uses opencobol)
+    ./ceaser-cipher <string> <encryptionKey>
+
+
 Time estimation: I guess I didn't actually write it down here.  I estimated this would take me 8 hours.  
 
 
