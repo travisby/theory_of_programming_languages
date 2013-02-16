@@ -36,8 +36,11 @@
                10 Alpha-String OCCURS 26 TIMES PIC A(26).
        PROCEDURE DIVISION.
            ACCEPT User-String FROM ARGUMENT-VALUE
-           DISPLAY  " = ", FUNCTION LOWER-CASE( User-String )
-           DISPLAY " = ", Alpha-String(2).
+           SET User-String TO FUNCTION LOWER-CASE (User-String)
+           DISPLAY  "input = ", User-String
+           INSPECT User-String
+               CONVERTING Alpha-String(1) TO Alpha-String(26)
+           DISPLAY "converted = ", User-String
 
 
            STOP RUN.
