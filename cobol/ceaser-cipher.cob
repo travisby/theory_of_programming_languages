@@ -3,7 +3,25 @@
        DATA DIVISION.
        LOCAL-STORAGE SECTION.
        01 User-String  PIC A(50).
-       01 EncKey          PIC 99.
+       01 EncKey       PIC 99.
+       01 Temp         PIC A(50).
+       PROCEDURE DIVISION.
+       Begin.
+           ACCEPT User-String FROM ARGUMENT-VALUE
+           ACCEPT EncKey FROM ARGUMENT-VALUE
+           ADD 1 TO EncKey
+           SET User-String TO FUNCTION LOWER-CASE (User-String)
+           DISPLAY  "input = ", User-String
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY "output = ", Temp.
+           STOP RUN.
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MAKE-CIPHER.
+       DATA DIVISION.
+       LOCAL-STORAGE SECTION.
        01 Alpha.
            05 Alphabet-Strings.
                10 FILLER PIC A(26) VALUE "abcdefghijklmnopqrstuvwxyz".
@@ -34,14 +52,12 @@
                10 FILLER PIC A(26) VALUE "zabcdefghijklmnopqrstuvwxy".
            05 FILLER REDEFINES Alphabet-Strings.
                10 Alpha-String OCCURS 26 TIMES PIC A(26).
-       PROCEDURE DIVISION.
-       Begin.
-           ACCEPT User-String FROM ARGUMENT-VALUE
-           ACCEPT EncKey FROM ARGUMENT-VALUE
-           ADD 1 TO EncKey
-           SET User-String TO FUNCTION LOWER-CASE (User-String)
-           DISPLAY  "input = ", User-String
-           INSPECT User-String
-               CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
-           DISPLAY "output = ", User-String
-           STOP RUN.
+       LINKAGE SECTION.
+       01 User-String  PIC A(50).
+       01 EncKey       PIC 99.
+       01 Temp         PIC A(50).
+       PROCEDURE DIVISION USING User-String EncKey Temp.
+       INSPECT User-String
+           CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
+           MOVE User-String TO Temp
+           EXIT PROGRAM.
