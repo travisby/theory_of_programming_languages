@@ -6,7 +6,6 @@
        01 EncKey       PIC 99.
        01 Temp         PIC A(50).
        PROCEDURE DIVISION.
-       Begin.
            ACCEPT User-String FROM ARGUMENT-VALUE
            ACCEPT EncKey FROM ARGUMENT-VALUE
            ADD 1 TO EncKey
