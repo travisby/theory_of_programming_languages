@@ -8,14 +8,53 @@
        PROCEDURE DIVISION.
            ACCEPT User-String FROM ARGUMENT-VALUE
            ACCEPT EncKey FROM ARGUMENT-VALUE
-           ADD 1 TO EncKey
            SET User-String TO FUNCTION LOWER-CASE (User-String)
            DISPLAY  "input = ", User-String
-           CALL 'MAKE-CIPHER' USING
+           CALL 'ENCRYPT' USING
            BY CONTENT User-String EncKey
            BY REFERENCE Temp
            DISPLAY "output = ", Temp.
+           CALL 'DECRYPT' USING
+           BY CONTENT Temp EncKey
+           BY REFERENCE Temp
+           DISPLAY "input = ", Temp.
            STOP RUN.
+
+
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ENCRYPT.
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 User-String  PIC A(50).
+       01 EncKey       PIC 99.
+       01 Temp         PIC A(50).
+       PROCEDURE DIVISION USING User-String EncKey Temp.
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           EXIT PROGRAM.
+
+
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. DECRYPT.
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 User-String  PIC A(50).
+       01 EncKey       PIC 99.
+       01 Temp         PIC A(50).
+       PROCEDURE DIVISION USING User-String EncKey Temp.
+           SUBTRACT EncKey FROM 27 GIVING EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           EXIT PROGRAM.
+
+
+
+
 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. MAKE-CIPHER.
