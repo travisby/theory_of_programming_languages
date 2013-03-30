@@ -1,2 +1,4 @@
 -module(ceaser).
--export([]).
+-export([encrypt/2]).
+
+encrypt(Str, Key) -> Str.
