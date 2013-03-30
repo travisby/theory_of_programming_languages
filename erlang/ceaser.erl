@@ -4,4 +4,4 @@
 encrypt(Str, Key) -> lists:map(fun(Char) -> encrypt_one(Char, Key) end, Str).
 decrypt(Str, Key) -> encrypt(Str, -Key).
 
-encrypt_one(Char, Key) -> Char.
+encrypt_one(Char, Key) -> erlang:mod((Char + Key), 26).
