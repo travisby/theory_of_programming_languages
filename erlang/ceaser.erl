@@ -3,3 +3,5 @@
 
 encrypt(Str, Key) -> Str.
 decrypt(Str, Key) -> Str.
+
+encrypt_one(Char, Key) -> Char.
