@@ -24,8 +24,7 @@ LEN_TRIM(STRING)  Returns the length of the string without the possibly
        LLT(STRING_A, STRING_B)
 TRIM(STRING)               Returns the character string STRING without
                            trailing blanks.
-VERIFY(STRING, SET, back)  Returns the position of the first character
-                           in STRING which is not in SET.  If BACK
-                           is TRUE, you get the last one!
-                           The result is zero if all characters are
-                           included!
+
+Array Functions
+===============
+SIZE(ARRAY, dim) is a function which returns the number of elements in an array ARRAY, if DIM is not given, and the number of elements in the relevant dimension if DIM is included.
