@@ -36,6 +36,11 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     character(100) :: string
     character(100) encrypted
     integer        :: key
+
+    integer        :: i
+
+    DO i = 0,LEN_TRIM(string)
+    END DO
     encrypted = string
     return
 END FUNCTION encrypt
@@ -46,6 +51,10 @@ FUNCTION decrypt(string, key) RESULT(decrypted)
     character(100) :: decrypted
     integer, intent(in) :: key
     character(100), intent(in) :: string
+
+    integer        :: i
+    DO i = 0,LEN_TRIM(string)
+    END DO
     decrypted = string
     return
 END FUNCTION decrypt
