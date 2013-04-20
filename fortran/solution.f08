@@ -1,18 +1,18 @@
 ! 5 = keyboard, * = any kind of data you want, baby
-Program ceaser
+PROGRAM ceaser
     implicit none
 
-    INTERFACE
-        function encrypt(string, key)
+    interface
+        FUNCTION encrypt(string, key)
             character(100) :: encrypt
             integer, intent(in) :: key
             character(100), intent(in) :: string
-        end function encrypt
-        function decrypt(string, key)
+        END FUNCTION encrypt
+        FUNCTION decrypt(string, key)
             character(100) :: decrypt
             integer, intent(in) :: key
             character(100), intent(in) :: string
-        end function decrypt
+        END FUNCTION decrypt
     END INTERFACE
 
 
@@ -28,9 +28,9 @@ Program ceaser
     print *, encrypted
     decrypted = decrypt(encrypted, key)
     print *, decrypted
-End Program ceaser
+END PROGRAM ceaser
 
-function encrypt(string, key) result(encrypted)
+FUNCTION encrypt(string, key) RESULT(encrypted)
     implicit none
 
     character(100) :: string
@@ -38,9 +38,9 @@ function encrypt(string, key) result(encrypted)
     integer        :: key
     encrypted = string
     return
-end function encrypt
+END FUNCTION encrypt
 
-function decrypt(string, key) result(decrypted)
+FUNCTION decrypt(string, key) RESULT(decrypted)
 
     implicit none
     character(100) :: decrypted
@@ -48,5 +48,5 @@ function decrypt(string, key) result(decrypted)
     character(100), intent(in) :: string
     decrypted = string
     return
-end function decrypt
+END FUNCTION decrypt
 
