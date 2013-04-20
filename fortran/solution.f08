@@ -2,7 +2,7 @@
 PROGRAM ceaser
     implicit none
 
-    interface
+    INTERFACE
         FUNCTION encrypt(string, key)
             character(100) :: encrypt
             integer, intent(in) :: key
@@ -15,19 +15,18 @@ PROGRAM ceaser
         END FUNCTION decrypt
     END INTERFACE
 
-
     character(100)  :: str
     integer         :: key
     character(100)  :: encrypted
     character(100)  :: decrypted
-    print *, "Please enter a string with less than 100 characters."
-    read (*, '(A)'), str
-    print *, "Please enter your (integer) encryption key."
-    read (*, *), key
+    PRINT *, "Please enter a string with less than 100 characters."
+    READ (*, '(A)'), str
+    PRINT *, "Please enter your (integer) encryption key."
+    READ (*, *), key
     encrypted = encrypt(str, key)
-    print *, encrypted
+    PRINT *, encrypted
     decrypted = decrypt(encrypted, key)
-    print *, decrypted
+    PRINT *, decrypted
 END PROGRAM ceaser
 
 FUNCTION encrypt(string, key) RESULT(encrypted)
@@ -42,11 +41,10 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     DO i = 0,LEN_TRIM(string)
     END DO
     encrypted = string
-    return
+    RETURN
 END FUNCTION encrypt
 
 FUNCTION decrypt(string, key) RESULT(decrypted)
-
     implicit none
     character(100) :: decrypted
     integer, intent(in) :: key
@@ -56,6 +54,5 @@ FUNCTION decrypt(string, key) RESULT(decrypted)
     DO i = 0,LEN_TRIM(string)
     END DO
     decrypted = string
-    return
+    RETURN
 END FUNCTION decrypt
-
