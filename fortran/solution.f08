@@ -24,9 +24,9 @@ PROGRAM ceaser
     PRINT *, "Please enter your (integer) encryption key."
     READ (*, *), key
     encrypted = encrypt(str, key)
-    PRINT *, encrypted
+    PRINT *, TRIM(encrypted)
     decrypted = decrypt(encrypted, key)
-    PRINT *, decrypted
+    PRINT *, TRIM(decrypted)
 END PROGRAM ceaser
 
 FUNCTION encrypt(string, key) RESULT(encrypted)
