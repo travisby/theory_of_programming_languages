@@ -65,16 +65,39 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     END DO
     RETURN
 END FUNCTION encrypt
-
 FUNCTION decrypt(string, key) RESULT(decrypted)
     implicit none
-    character(100) :: decrypted
-    integer, intent(in) :: key
-    character(100), intent(in) :: string
+
+    character(100) :: string
+    character(100) decrypted
+    integer        :: key
 
     integer        :: i
+    character      :: ourChar
+    integer        :: lowerA
+    integer        :: lowerZ
+    integer        :: upperA
+    integer        :: upperZ
+    integer        :: ourCharNum
+    logical        :: myFuckingBool
+    logical        :: myOtherFuckingBool
+
+    lowerA = IACHAR('a')
+    lowerZ = IACHAR('z')
+    upperA = IACHAR('A')
+    upperZ = IACHAR('Z')
+
     DO i = 0,LEN_TRIM(string)
+        ourChar = string(i:i)
+        ourCharNum = IACHAR(ourChar)
+        myFuckingBool = ((ourCharNum .GE. lowerA) .AND.  (ourCharNum .LE. lowerZ))
+        myOtherFuckingBool = ((ourCharNum .GE. upperA) .AND.  (ourCharNum .LE. upperZ))
+        IF (myFuckingBool) THEN
+            ourChar = ACHAR(lowerA + MOD(ourCharNum - lowerA - key, 26))
+        ELSE IF (myOtherFuckingBool) THEN
+            ourChar = ACHAR(upperA + MOD(ourCharNum - upperA - key, 26))
+        END IF
+        decrypted(i:i) = ourChar
     END DO
-    decrypted = string
     RETURN
 END FUNCTION decrypt
