@@ -52,16 +52,17 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
 
     DO i = 0,LEN_TRIM(string)
         ourChar = string(i:i)
-        ourCharNum = IACHAR(ourChar)
+        ourCharNum = ICHAR(ourChar)
         myFuckingBool = ((ourCharNum .GE. lowerA) .AND.  (ourCharNum .LE. lowerZ))
         myOtherFuckingBool = ((ourCharNum .GE. upperA) .AND.  (ourCharNum .LE. upperZ))
         IF (myFuckingBool) THEN
-            ourChar = ACHAR(lowerA + MOD(ourCharNum - lowerA + key, 26))
+            ourChar = CHAR(lowerA + MOD(ourCharNum - lowerA + key, 26))
         ELSE IF (myOtherFuckingBool) THEN
-            ourChar = ACHAR(upperA + MOD(ourCharNum - upperA + key, 26))
+            ourChar = CHAR(upperA + MOD(ourCharNum - upperA + key, 26))
         END IF
         encrypted(i:i) = ourChar
     END DO
+        encrypted = TRIM(encrypted)
     RETURN
 END FUNCTION encrypt
 
