@@ -37,10 +37,32 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     integer        :: key
 
     integer        :: i
+    character      :: ourChar
+    integer        :: lowerA
+    integer        :: lowerZ
+    integer        :: upperA
+    integer        :: upperZ
+    integer        :: ourCharNum
+    logical        :: myFuckingBool
+    logical        :: myOtherFuckingBool
+
+    lowerA = IACHAR('a')
+    lowerZ = IACHAR('z')
+    upperA = IACHAR('A')
+    upperZ = IACHAR('Z')
 
     DO i = 0,LEN_TRIM(string)
+        ourChar = string(i:i)
+        ourCharNum = IACHAR(ourChar)
+        myFuckingBool = ((ourCharNum .GE. lowerA) .AND.  (ourCharNum .LE. lowerZ))
+        myOtherFuckingBool = ((ourCharNum .GE. upperA) .AND.  (ourCharNum .LE. upperZ))
+        IF (myFuckingBool) THEN
+            ourChar = ACHAR(lowerA + MOD(ourCharNum - lowerA + key, 26))
+        ELSE IF (myOtherFuckingBool) THEN
+            ourChar = ACHAR(upperA + MOD(ourCharNum - upperA + key, 26))
+        END IF
+        encrypted(i:i) = ourChar
     END DO
-    encrypted = string
     RETURN
 END FUNCTION encrypt
 
