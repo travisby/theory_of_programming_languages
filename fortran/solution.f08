@@ -1,17 +1,16 @@
 ! 5 = keyboard, * = any kind of data you want, baby
 PROGRAM ceaser
     implicit none
-
     INTERFACE
         FUNCTION encrypt(string, key)
-            character(100) :: encrypt
             integer, intent(in) :: key
-            character(100), intent(in) :: string
+            character(*), intent(in) :: string
+            character(LEN=LEN_TRIM(string)) ::  encrypt
         END FUNCTION encrypt
         FUNCTION decrypt(string, key)
-            character(100) :: decrypt
             integer, intent(in) :: key
-            character(100), intent(in) :: string
+            character(*), intent(in) :: string
+            character(LEN=LEN_TRIM(string)) ::  decrypt
         END FUNCTION decrypt
     END INTERFACE
 
@@ -32,9 +31,9 @@ END PROGRAM ceaser
 FUNCTION encrypt(string, key) RESULT(encrypted)
     implicit none
 
-    character(100) :: string
-    character(100) encrypted
-    integer        :: key
+    character(LEN=*) :: string
+    character(LEN=LEN_TRIM(string)) :: encrypted
+    integer          :: key
 
     integer        :: i
     character      :: ourChar
@@ -70,9 +69,9 @@ FUNCTION decrypt(string, key) RESULT(decrypted)
     implicit none
     INTERFACE
         FUNCTION encrypt(string, key)
-            character(100) :: encrypt
             integer, intent(in) :: key
-            character(100), intent(in) :: string
+            character(*), intent(in) :: string
+            character(LEN=LEN_TRIM(string)) ::  encrypt
         END FUNCTION encrypt
     END INTERFACE
     character(100) :: decrypted
