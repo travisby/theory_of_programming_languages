@@ -68,13 +68,17 @@ END FUNCTION encrypt
 
 FUNCTION decrypt(string, key) RESULT(decrypted)
     implicit none
+    INTERFACE
+        FUNCTION encrypt(string, key)
+            character(100) :: encrypt
+            integer, intent(in) :: key
+            character(100), intent(in) :: string
+        END FUNCTION encrypt
+    END INTERFACE
     character(100) :: decrypted
     integer, intent(in) :: key
     character(100), intent(in) :: string
 
     integer        :: i
-    DO i = 0,LEN_TRIM(string)
-    END DO
-    decrypted = string
-    RETURN
+    decrypted = encrypt(string, -key)
 END FUNCTION decrypt
