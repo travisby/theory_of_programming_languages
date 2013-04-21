@@ -45,6 +45,7 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     logical        :: myFuckingBool
     logical        :: myOtherFuckingBool
 
+    ! Possible performance boost: move these out and treat them as constants
     lowerA = IACHAR('a')
     lowerZ = IACHAR('z')
     upperA = IACHAR('A')
