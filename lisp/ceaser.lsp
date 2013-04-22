@@ -1,16 +1,25 @@
-(DEFUN alphabets () (list (*abcdefghijklmnopqrstuvwxyz*) (*bcdefghijklmnopqrstuvwxyza*) (*cdefghijklmnopqrstuvwxyzab*) (*defghijklmnopqrstuvwxyzabc*) (*efghijklmnopqrstuvwxyzabcd*) (*fghijklmnopqrstuvwxyzabcde*) (*ghijklmnopqrstuvwxyzabcdef*) (*hijklmnopqrstuvwxyzabcdefg*) (*ijklmnopqrstuvwxyzabcdefgh*) (*jklmnopqrstuvwxyzabcdefghi*) (*klmnopqrstuvwxyzabcdefghij*) (*lmnopqrstuvwxyzabcdefghijk*) (*mnopqrstuvwxyzabcdefghijkl*) (*nopqrstuvwxyzabcdefghijklm*) (*opqrstuvwxyzabcdefghijklmn*) (*pqrstuvwxyzabcdefghijklmno*) (*qrstuvwxyzabcdefghijklmnop*) (*rstuvwxyzabcdefghijklmnopq*) (*stuvwxyzabcdefghijklmnopqr*) (*tuvwxyzabcdefghijklmnopqrs*) (*uvwxyzabcdefghijklmnopqrst*) (*vwxyzabcdefghijklmnopqrstu*) (*wxyzabcdefghijklmnopqrstuv*) (*xyzabcdefghijklmnopqrstuvw*) (*yzabcdefghijklmnopqrstuvwx*) (*zabcdefghijklmnopqrstuvwxy*)))
-
 (DEFUN myEncrypt (str key)
        "This function will encrypt str with a ceaser cipher, using key as the shift width"
-       (map str (lambda(myChar) replaceOneShifted(str myChar key)))
+       (map
+         'string #'
+         (lambda(myChar) (replaceOneShifted str myChar key))
+         str
+       )
 )
 (DEFUN myDecrypt (str key)
        "This function will decrypt str with a ceaser cipher, using key as the shift width"
-       (myEncrypt(str (- 26 key)))
+       (myEncrypt
+         str
+         (- 26 key)
+       )
 )
 (DEFUN solve (str)
        "This function will decrypt str with a ceaser cipher, returning all possible combinations"
-       (map possibleKeys (lambda (key) (decrypt str key)))
+       (map
+         'string #'
+         (lambda (key) (decrypt str key))
+         possibleKeys
+       )
 )
 (DEFUN possibleKeys ()
        "Returns [0..25]"
