@@ -19,8 +19,8 @@
 (DEFUN solve (str)
        "This function will decrypt str with a ceaser cipher, returning all possible combinations"
        (map
-         'string #'
-         (lambda (key) (myDecrypt str key))
+         nil
+         (lambda (key) (write-line (string (myDecrypt str key))))
          possibleKeys
        )
 )
