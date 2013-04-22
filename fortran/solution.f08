@@ -12,6 +12,10 @@ PROGRAM ceaser
             character(*), intent(in) :: string
             character(LEN=LEN_TRIM(string)) ::  decrypt
         END FUNCTION decrypt
+        FUNCTION solve(string)
+            character(*), intent(in) :: string
+            character(LEN=LEN_TRIM(string)) ::  solved
+        END FUNCTION solve
     END INTERFACE
 
     character(100)  :: str
