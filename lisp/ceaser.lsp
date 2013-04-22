@@ -1,16 +1,12 @@
+;collect (replaceOneShifted str myChar key)
 (DEFUN myEncrypt (str key)
        "This function will encrypt str with a ceaser cipher, using key as the shift width"
-       ; grab the zeroth element of...
-       (nth
-         0
-         ; the reverse of ..
-         (reverse
-         ; a list of all of the intermediary steps of ...
-           (loop for myChar across (nth 0 alphabets)
-                 ; replacing one character from the alphabet at a time on str
-                 collect (replaceOneShifted str myChar key)
-           )
+       (map
+         'string #'
+         (lambda(myChar)
+           (findEquivChar myChar key)
          )
+         str
        )
 )
 (DEFUN myDecrypt (str key)
