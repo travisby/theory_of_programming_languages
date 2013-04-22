@@ -17,7 +17,7 @@
        "This function will decrypt str with a ceaser cipher, returning all possible combinations"
        (map
          'string #'
-         (lambda (key) (decrypt str key))
+         (lambda (key) (myDecrypt str key))
          possibleKeys
        )
 )
