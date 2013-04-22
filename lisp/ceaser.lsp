@@ -31,7 +31,7 @@
        (position myChar (nth 0 alphabets))
 )
 ;Note: We do not take > 25 into account!
-(DEFUN findEquivCharacter (myChar key)
+(DEFUN findEquivChar (myChar key)
        "Returns the character shifted key positions"
        (char
          (nth
