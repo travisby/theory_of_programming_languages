@@ -26,3 +26,7 @@
        "Returns the character shifted key positions"
        (nth getPositionInNormalAlphabet(myChar) (nth key alphabets))
 )
+(DEFUN replaceOneShifted(str myChar key)
+       "Returns the string with myChar replaced with itself shifted key away"
+       (replace myChar findEquivChar(myChar key) str)
+)
