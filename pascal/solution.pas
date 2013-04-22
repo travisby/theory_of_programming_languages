@@ -5,8 +5,10 @@ program Ceaser(output);
     var solved : String;
 
     function encrypt(ourString: String; key: Integer) : String;
+        var c : Char;
         begin
-            encrypt := ourString;
+            for c in ourString do
+                encrypt := ourString;
             Exit;
         end;
     function decrypt(ourString: String; key: Integer) : String;
