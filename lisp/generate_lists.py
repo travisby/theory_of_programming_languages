@@ -15,8 +15,10 @@ def main():
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
     print "(DEFUN alphabets ()"
+    print "( list"
     for i in range(len(alphabet)):
         print '\t(*%s*)' % wraparound_str(alphabet, i)
+    print ")"
 
     print ")"
 
