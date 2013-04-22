@@ -1,5 +1,8 @@
 program Ceaser(output);
-    var ourStr : String(999999999);
+    var ourStr : String;
+    var encrypted : String;
+    var decrypted : String;
+    var solved : String;
 
     function encrypt(ourString: String; key: Integer) : String;
         begin
@@ -16,5 +19,14 @@ program Ceaser(output);
             solve := ourString;
             Exit;
         end;
-begin
-end.
+
+    begin
+        ourStr := 'HAL';
+        encrypted := encrypt(ourStr, 1);
+        decrypted := decrypt(encrypted, 1);
+        solved := solve(encrypted);
+        writeln(ourStr);
+        writeln(encrypted);
+        writeln(decrypted);
+        writeln(solved);
+    end.
