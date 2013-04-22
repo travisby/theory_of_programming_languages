@@ -3,15 +3,18 @@ program Ceaser(output);
 
     function encrypt(ourString: String; key: Integer) : String;
         begin
-        encrypt := ourString
+            encrypt := ourString;
+            Exit;
         end;
     function decrypt(ourString: String; key: Integer) : String;
         begin
-        decrypt := ourString
+            decrypt := ourString;
+            Exit;
         end;
     function solve(ourString: String) : String;
         begin
-        solve := ourString
+            solve := ourString;
+            Exit;
         end;
 begin
 end.
