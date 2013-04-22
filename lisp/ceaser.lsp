@@ -49,10 +49,10 @@
 )
 (DEFUN replaceOneShifted (str myChar key)
        "Returns the string with myChar replaced with itself shifted key away"
-       (substitute
-         (findEquivChar myChar key)
-         myChar
-         str
-       )
+         (substitute
+           (findEquivChar myChar key)
+           myChar
+           str
+         )
 )
-(DEFUN alphabets () ( list (string "abcdefghijklmnopqrstuvwxyz") (string "bcdefghijklmnopqrstuvwxyza") (string "cdefghijklmnopqrstuvwxyzab") (string "defghijklmnopqrstuvwxyzabc") (string "efghijklmnopqrstuvwxyzabcd") (string "fghijklmnopqrstuvwxyzabcde") (string "ghijklmnopqrstuvwxyzabcdef") (string "hijklmnopqrstuvwxyzabcdefg") (string "ijklmnopqrstuvwxyzabcdefgh") (string "jklmnopqrstuvwxyzabcdefghi") (string "klmnopqrstuvwxyzabcdefghij") (string "lmnopqrstuvwxyzabcdefghijk") (string "mnopqrstuvwxyzabcdefghijkl") (string "nopqrstuvwxyzabcdefghijklm") (string "opqrstuvwxyzabcdefghijklmn") (string "pqrstuvwxyzabcdefghijklmno") (string "qrstuvwxyzabcdefghijklmnop") (string "rstuvwxyzabcdefghijklmnopq") (string "stuvwxyzabcdefghijklmnopqr") (string "tuvwxyzabcdefghijklmnopqrs") (string "uvwxyzabcdefghijklmnopqrst") (string "vwxyzabcdefghijklmnopqrstu") (string "wxyzabcdefghijklmnopqrstuv") (string "xyzabcdefghijklmnopqrstuvw") (string "yzabcdefghijklmnopqrstuvwx") (string "zabcdefghijklmnopqrstuvwxy") ) )
+(setf alphabets ( list (string "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") (string "bcdefghijklmnopqrstuvwxyzaBCDEFGHIJKLMNOPQRSTUVWXYZA") (string "cdefghijklmnopqrstuvwxyzabCDEFGHIJKLMNOPQRSTUVWXYZAB") (string "defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC") (string "efghijklmnopqrstuvwxyzabcdEFGHIJKLMNOPQRSTUVWXYZABCD") (string "fghijklmnopqrstuvwxyzabcdeFGHIJKLMNOPQRSTUVWXYZABCDE") (string "ghijklmnopqrstuvwxyzabcdefGHIJKLMNOPQRSTUVWXYZABCDEF") (string "hijklmnopqrstuvwxyzabcdefgHIJKLMNOPQRSTUVWXYZABCDEFG") (string "ijklmnopqrstuvwxyzabcdefghIJKLMNOPQRSTUVWXYZABCDEFGH") (string "jklmnopqrstuvwxyzabcdefghiJKLMNOPQRSTUVWXYZABCDEFGHI") (string "klmnopqrstuvwxyzabcdefghijKLMNOPQRSTUVWXYZABCDEFGHIJ") (string "lmnopqrstuvwxyzabcdefghijkLMNOPQRSTUVWXYZABCDEFGHIJK") (string "mnopqrstuvwxyzabcdefghijklMNOPQRSTUVWXYZABCDEFGHIJKL") (string "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM") (string "opqrstuvwxyzabcdefghijklmnOPQRSTUVWXYZABCDEFGHIJKLMN") (string "pqrstuvwxyzabcdefghijklmnoPQRSTUVWXYZABCDEFGHIJKLMNO") (string "qrstuvwxyzabcdefghijklmnopQRSTUVWXYZABCDEFGHIJKLMNOP") (string "rstuvwxyzabcdefghijklmnopqRSTUVWXYZABCDEFGHIJKLMNOPQ") (string "stuvwxyzabcdefghijklmnopqrSTUVWXYZABCDEFGHIJKLMNOPQR") (string "tuvwxyzabcdefghijklmnopqrsTUVWXYZABCDEFGHIJKLMNOPQRS") (string "uvwxyzabcdefghijklmnopqrstUVWXYZABCDEFGHIJKLMNOPQRST") (string "vwxyzabcdefghijklmnopqrstuVWXYZABCDEFGHIJKLMNOPQRSTU") (string "wxyzabcdefghijklmnopqrstuvWXYZABCDEFGHIJKLMNOPQRSTUV") (string "xyzabcdefghijklmnopqrstuvwXYZABCDEFGHIJKLMNOPQRSTUVW") (string "yzabcdefghijklmnopqrstuvwxYZABCDEFGHIJKLMNOPQRSTUVWX") (string "zabcdefghijklmnopqrstuvwxyZABCDEFGHIJKLMNOPQRSTUVWXY")))

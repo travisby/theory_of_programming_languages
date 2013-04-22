@@ -14,10 +14,10 @@ def main():
     ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-    print "(DEFUN alphabets ()"
+    print "(setf alphabets"
     print "( list"
     for i in range(len(alphabet)):
-        print '\t(string "%s")' % wraparound_str(alphabet, i)
+        print '\t(string "%s%s")' % (wraparound_str(alphabet, i), wraparound_str(ALPHABET, i))
     print ")"
 
     print ")"
