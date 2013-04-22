@@ -40,18 +40,16 @@
 ;Note: We do not take > 25 into account!
 (DEFUN findEquivChar (myChar key)
        "Returns the character shifted key positions"
+       (if
+         (position myChar (nth 0 alphabets))
        (char
          (nth
            key
            alphabets
          )
-         (position
-           myChar
-           (nth
-             0
-             alphabets
-           )
-         )
+         (position myChar (nth 0 alphabets))
+       )
+       myChar
        )
 )
 (DEFUN replaceOneShifted (str myChar key)
