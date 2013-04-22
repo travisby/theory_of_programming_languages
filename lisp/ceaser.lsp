@@ -36,12 +36,18 @@
        (char
          (nth
            key
-           alphabet
+           alphabets
          )
-         myChar
+         (position
+           myChar
+           (nth
+             0
+             alphabets
+           )
+         )
        )
 )
-(DEFUN replaceOneShifted(str myChar key)
+(DEFUN replaceOneShifted (str myChar key)
        "Returns the string with myChar replaced with itself shifted key away"
        (substitute
          (findEquivChar myChar key)
