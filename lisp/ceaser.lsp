@@ -2,7 +2,7 @@
 
 (DEFUN myEncrypt (str key)
        "This function will encrypt str with a ceaser cipher, using key as the shift width"
-       (str)
+       (map str (lambda(myChar) replaceOneShifted(str myChar key)))
 )
 (DEFUN myDecrypt (str key)
        "This function will decrypt str with a ceaser cipher, using key as the shift width"
