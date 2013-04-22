@@ -21,6 +21,7 @@
        "Returns the position of a character in the normal alphabet.  EX: getPos...('a') = 0"
        (position myChar (nth 0 alphabets))
 )
+;Note: We do not take > 25 into account!
 (DEFUN findEquivCharacter (myChar key)
        "Returns the character shifted key positions"
        (nth getPositionInNormalAlphabet(myChar) (nth key alphabets))
