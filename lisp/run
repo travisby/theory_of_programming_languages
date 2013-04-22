@@ -6,7 +6,17 @@ openParen='('
 closeParen=')'
 str="$2"
 key="$3"
-function="$1"
+function="solve"
+
+case "$1" in
+    "encrypt") 
+        function="myEncrypt"
+        ;;
+    "decrypt") 
+        function="myDecrypt"
+        ;;
+*)
+esac
 
 myStr=$singleQuote$openParen$function$space$doubleQuote$str$doubleQuote$space$key$closeParen$singleQuote
 echo /usr/bin/clisp -i ceaser.lsp -x $myStr | sh
