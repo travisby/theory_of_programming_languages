@@ -83,3 +83,21 @@ FUNCTION decrypt(string, key) RESULT(decrypted)
     integer        :: i
     decrypted = encrypt(string, -key)
 END FUNCTION decrypt
+
+FUNCTION solve(string) RESULT(solved)
+    implicit none
+    INTERFACE
+        FUNCTION decrypt(string, key)
+            integer, intent(in) :: key
+            character(*), intent(in) :: string
+            character(LEN=LEN_TRIM(string)) ::  decrypt
+        END FUNCTION decrypt
+    END INTERFACE
+    character(100) :: solved
+    character(100), intent(in) :: string
+    integer        :: i
+
+    DO i = 0,25
+        PRINT *, decrypt(string, i)
+    END DO
+END FUNCTION solve
