@@ -31,7 +31,7 @@ program Ceaser(output);
         end;
     function decrypt(ourString: String; key: Integer) : String;
         begin
-            decrypt := ourString;
+            decrypt := encrypt(ourString, 26 - key);
             Exit;
         end;
     function solve(ourString: String) : String;
