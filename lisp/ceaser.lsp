@@ -33,9 +33,16 @@
 ;Note: We do not take > 25 into account!
 (DEFUN findEquivCharacter (myChar key)
        "Returns the character shifted key positions"
-       (nth getPositionInNormalAlphabet(myChar) (nth key alphabets))
+       (char
+         (nth
+           key
+           alphabet
+         )
+         myChar
+       )
 )
 (DEFUN replaceOneShifted(str myChar key)
        "Returns the string with myChar replaced with itself shifted key away"
        (replace myChar findEquivChar(myChar key) str)
 )
+(DEFUN alphabets () ( list (string "abcdefghijklmnopqrstuvwxyz") (string "bcdefghijklmnopqrstuvwxyza") (string "cdefghijklmnopqrstuvwxyzab") (string "defghijklmnopqrstuvwxyzabc") (string "efghijklmnopqrstuvwxyzabcd") (string "fghijklmnopqrstuvwxyzabcde") (string "ghijklmnopqrstuvwxyzabcdef") (string "hijklmnopqrstuvwxyzabcdefg") (string "ijklmnopqrstuvwxyzabcdefgh") (string "jklmnopqrstuvwxyzabcdefghi") (string "klmnopqrstuvwxyzabcdefghij") (string "lmnopqrstuvwxyzabcdefghijk") (string "mnopqrstuvwxyzabcdefghijkl") (string "nopqrstuvwxyzabcdefghijklm") (string "opqrstuvwxyzabcdefghijklmn") (string "pqrstuvwxyzabcdefghijklmno") (string "qrstuvwxyzabcdefghijklmnop") (string "rstuvwxyzabcdefghijklmnopq") (string "stuvwxyzabcdefghijklmnopqr") (string "tuvwxyzabcdefghijklmnopqrs") (string "uvwxyzabcdefghijklmnopqrst") (string "vwxyzabcdefghijklmnopqrstu") (string "wxyzabcdefghijklmnopqrstuv") (string "xyzabcdefghijklmnopqrstuvw") (string "yzabcdefghijklmnopqrstuvwx") (string "zabcdefghijklmnopqrstuvwxy") ) )
