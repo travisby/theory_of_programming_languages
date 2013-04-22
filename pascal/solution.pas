@@ -35,8 +35,14 @@ program Ceaser(output);
             Exit;
         end;
     function solve(ourString: String) : String;
+        var i : Integer;
         begin
-            solve := ourString;
+            solve := '';
+            while i <= 25 do
+                begin
+                    solve := solve + '\n' + decrypt(ourString, i);
+                    i := i + 1;
+                end;
             Exit;
         end;
 
