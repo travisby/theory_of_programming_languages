@@ -1,3 +1,5 @@
+(DEFUN alphabets () (*abcdefghijklmnopqrstuvwxyz*) (*bcdefghijklmnopqrstuvwxyza*) (*cdefghijklmnopqrstuvwxyzab*) (*defghijklmnopqrstuvwxyzabc*) (*efghijklmnopqrstuvwxyzabcd*) (*fghijklmnopqrstuvwxyzabcde*) (*ghijklmnopqrstuvwxyzabcdef*) (*hijklmnopqrstuvwxyzabcdefg*) (*ijklmnopqrstuvwxyzabcdefgh*) (*jklmnopqrstuvwxyzabcdefghi*) (*klmnopqrstuvwxyzabcdefghij*) (*lmnopqrstuvwxyzabcdefghijk*) (*mnopqrstuvwxyzabcdefghijkl*) (*nopqrstuvwxyzabcdefghijklm*) (*opqrstuvwxyzabcdefghijklmn*) (*pqrstuvwxyzabcdefghijklmno*) (*qrstuvwxyzabcdefghijklmnop*) (*rstuvwxyzabcdefghijklmnopq*) (*stuvwxyzabcdefghijklmnopqr*) (*tuvwxyzabcdefghijklmnopqrs*) (*uvwxyzabcdefghijklmnopqrst*) (*vwxyzabcdefghijklmnopqrstu*) (*wxyzabcdefghijklmnopqrstuv*) (*xyzabcdefghijklmnopqrstuvw*) (*yzabcdefghijklmnopqrstuvwx*) (*zabcdefghijklmnopqrstuvwxy*) )
+
 (DEFUN myEncrypt (str key)
        "This function will encrypt str with a ceaser cipher, using key as the shift width"
        (str)
