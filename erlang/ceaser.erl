@@ -14,3 +14,5 @@ encrypt_one(Char, _) -> Char.
 % lists:member(Needle, Haystack) would look pretty
 find_alphabet_start(Char) when ($a =< Char) and (Char =< $z) -> $a;
 find_alphabet_start(Char) when ($A =< Char) and (Char =< $Z) -> $A.
+
+solve(Str) -> lists:map(fun(Key) -> decrypt(Str, Key) end, Str).
