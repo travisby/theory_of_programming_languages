@@ -1,0 +1,12 @@
+#!/bin/sh
+singleQuote="'"
+doubleQuote='"'
+space=' '
+openParen='('
+closeParen=')'
+str="$2"
+key="$3"
+function="$1"
+
+myStr=$singleQuote$openParen$function$space$doubleQuote$str$doubleQuote$space$key$closeParen$singleQuote
+echo /usr/bin/clisp -i ceaser.lsp -x $myStr | sh
