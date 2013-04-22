@@ -16,7 +16,7 @@ def main():
 
     print "(DEFUN alphabets ()"
     for i in range(len(alphabet)):
-        print '\t("%s")' % wraparound_str(alphabet, i)
+        print '\t(*%s*)' % wraparound_str(alphabet, i)
 
     print ")"
 
