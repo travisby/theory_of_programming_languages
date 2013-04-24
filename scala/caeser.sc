@@ -2,6 +2,23 @@ def encrypt (str : String, key : Int) : String = {
     return str
 }
 
+def encrypt_one (myChar: Character, key : Int) : Character = {
+    val lowerA = 'a' toInt
+    val lowerZ = 'z' toInt
+    val upperA = 'A' toInt
+    val upperZ = 'Z' toInt
+    val ordOfChar = myChar toInt
+
+    if (ordOfChar >= lowerA && ordOfChar <= lowerZ) {
+        return (lowerA + ((ordOfChar - lowerA + key) % 26)) toChar
+    }
+    else if (ordOfChar >= upperA && ordOfChar <= lowerZ) {
+        return (upperA + ((ordOfChar - upperA + key) % 26)) toChar
+    }
+    return myChar
+
+}
+
 def decrypt (str : String, key : Int) : String = {
     return encrypt(str, 26 - key)
 }
