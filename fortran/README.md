@@ -31,3 +31,6 @@ SIZE(ARRAY, dim) is a function which returns the number of elements in an array 
 
 
 -- Compile to a file called "run"
+
+
+I finished in around 6 hours in the middle of Game Day
