@@ -14,6 +14,39 @@ test_cases = {
     'encrypt "h%al" 1': 'i%bm',
     'encrypt "h,al" 1': 'i,bm',
 }
+test_cases = {}
+
+solve_cases = {
+    'solve "hal"': [
+        'hal',
+        'gzk',
+        'fyj',
+        'exi',
+        'dwh',
+        'cvg',
+        'buf',
+        'ate',
+        'zsd',
+        'yrc',
+        'xqb',
+        'wpa',
+        'voz',
+        'uny',
+        'tmx',
+        'slw',
+        'rkv',
+        'qju',
+        'pit',
+        'ohs',
+        'ngr',
+        'mfq',
+        'lep',
+        'kdo',
+        'jcn',
+        'ibm',
+    ],
+}
+
 directories = [
     'cobol',
     'erlang',
@@ -37,4 +70,37 @@ for directory in directories:
             print 'expected: %s' % test_cases[case]
             print 'output: %s' % result
             print '---------------------'
+        else:
+            print '---------------------'
+            print 'success!'
+            print directory
+            print case
+            print 'output: %s' % result
+            print '---------------------'
+
+    for case in solve_cases:
+        success = True
+        pointer = os.popen('./run %s' % case)
+        result = pointer.read()
+        for item in solve_cases[case]:
+            if item not in result:
+                print '---------------------'
+                print 'Fail!'
+                print directory
+                print case
+                print 'expected: %s' % solve_cases[case]
+                print 'output: %s' % result
+                print '---------------------'
+                success = False
+                break
+        if success:
+            pass
+        """
+            print '---------------------'
+            print 'success!'
+            print directory
+            print case
+            print 'output: %s' % result
+            print '---------------------'
+        """
     os.chdir('../')
