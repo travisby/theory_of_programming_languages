@@ -4,9 +4,6 @@ Uses sysutils;
     var func : String;
     var ourStr : String;
     var key    : Integer;
-    var encrypted : String;
-    var decrypted : String;
-    var solved : String;
 
     function encrypt(ourString: String; key: Integer) : String;
         var i : Integer;
@@ -64,5 +61,4 @@ Uses sysutils;
             writeln(decrypt(ourStr, key))
         else
             writeln(solve(ourStr));
-
     end.
