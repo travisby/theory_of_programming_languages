@@ -61,9 +61,14 @@ FUNCTION encrypt(string, key) RESULT(encrypted)
     upperA = IACHAR('A')
     upperZ = IACHAR('Z')
 
+    IF (key < 0) THEN
+        key = key * (0 - 1)
+    END IF
     DO i = 0,LEN_TRIM(string)
         ourChar = string(i:i)
         ourCharNum = ICHAR(ourChar)
+        ! There is a line length issue with fortran... and putting these two on
+        ! the same line was not a good time.
         myFuckingBool = ((ourCharNum .GE. lowerA) .AND.  (ourCharNum .LE. lowerZ))
         myOtherFuckingBool = ((ourCharNum .GE. upperA) .AND.  (ourCharNum .LE. upperZ))
         IF (myFuckingBool) THEN
