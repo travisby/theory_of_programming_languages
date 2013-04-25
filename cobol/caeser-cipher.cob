@@ -2,22 +2,20 @@
        PROGRAM-ID. CEASER-CIPHER.
        DATA DIVISION.
        LOCAL-STORAGE SECTION.
+       01 func         PIC A(15).
        01 User-String  PIC A(50).
        01 EncKey       PIC 99.
        01 Temp         PIC A(50).
        PROCEDURE DIVISION.
+           ACCEPT func FROM ARGUMENT-VALUE
            ACCEPT User-String FROM ARGUMENT-VALUE
            ACCEPT EncKey FROM ARGUMENT-VALUE
            SET User-String TO FUNCTION LOWER-CASE (User-String)
-           DISPLAY  "input = ", User-String
-           CALL 'ENCRYPT' USING
+           SET func TO FUNCTION UPPER-CASE (func)
+           CALL func USING
            BY CONTENT User-String EncKey
            BY REFERENCE Temp
-           DISPLAY "output = ", Temp.
-           CALL 'DECRYPT' USING
-           BY CONTENT Temp EncKey
-           BY REFERENCE Temp
-           DISPLAY "input = ", Temp.
+           DISPLAY Temp.
            STOP RUN.
 
        IDENTIFICATION DIVISION.
