@@ -1,0 +1,2 @@
+#!/bin/sh
+scala caeser.sc $1 $2 $3
