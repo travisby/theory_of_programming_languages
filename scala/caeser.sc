@@ -1,8 +1,10 @@
 def encrypt (str : String, key : Int) : String = {
-    return str
+    var myMutableStr = str
+    val myEncrypt =( x :Char ) => encrypt_one(x, key)
+    return myMutableStr.map(myEncrypt)
 }
 
-def encrypt_one (myChar: Character, key : Int) : Character = {
+def encrypt_one (myChar: Char, key : Int) : Char = {
     val lowerA = 'a' toInt
     val lowerZ = 'z' toInt
     val upperA = 'A' toInt
