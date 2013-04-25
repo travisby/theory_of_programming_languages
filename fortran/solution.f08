@@ -18,11 +18,11 @@ PROGRAM ceaser
         END FUNCTION solve
     END INTERFACE
 
-    character(100)  :: str
+    character(1000)  :: str
     integer         :: key
     character(100)  :: strKey
     character(100)  :: func
-    character(100)  :: converted
+    character(1000)  :: converted
     CALL getarg(1, func)
     CALL getarg(2, str)
     IF (func .eq. "encrypt") THEN
