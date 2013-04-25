@@ -1,0 +1,1176 @@
+---------------------
+Fail!
+cobol
+encrypt "HAL" 1
+expected: IBM
+output: ibm                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "h%al" 1
+output: i%bm                                              
+
+---------------------
+---------------------
+success!
+cobol
+decrypt "@" 13
+output: @                                                 
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "hal" 27
+output: ibm                                               
+
+---------------------
+---------------------
+Fail!
+cobol
+encrypt "hal hal" 1
+expected: ibm ibm
+output: hal                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "h,al" 1
+output: i,bm                                              
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "travis" 13
+output: genivf                                            
+
+---------------------
+---------------------
+success!
+cobol
+decrypt "ibm" 1
+output: hal                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "hal" 1
+output: ibm                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "hal" 0
+output: hal                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "hal" 26
+output: hal                                               
+
+---------------------
+---------------------
+success!
+cobol
+encrypt "007" 2
+output: 007                                               
+
+---------------------
+---------------------
+success!
+cobol
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output: xyzabcdefghijklmnopqrstuvw                        
+
+---------------------
+---------------------
+success!
+cobol
+decrypt "genivf" 13
+output: travis                                            
+
+---------------------
+---------------------
+success!
+cobol
+decrypt "{" 13
+output: {                                                 
+
+---------------------
+---------------------
+Fail!
+cobol
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+expected: Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes.
+output: how                                               
+
+---------------------
+---------------------
+success!
+cobol
+solve "hal"
+output: ibm                                               
+jcn                                               
+kdo                                               
+lep                                               
+mfq                                               
+ngr                                               
+ohs                                               
+pit                                               
+qju                                               
+rkv                                               
+slw                                               
+tmx                                               
+uny                                               
+voz                                               
+wpa                                               
+xqb                                               
+yrc                                               
+zsd                                               
+ate                                               
+buf                                               
+cvg                                               
+dwh                                               
+exi                                               
+fyj                                               
+gzk                                               
+hal                                               
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "HAL" 1
+output: IBM
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "h%al" 1
+output: i%bm
+
+---------------------
+---------------------
+success!
+erlang
+decrypt "@" 13
+output: @
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "hal" 27
+output: ibm
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "hal hal" 1
+output: ibm ibm
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "h,al" 1
+output: i,bm
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "travis" 13
+output: genivf
+
+---------------------
+---------------------
+success!
+erlang
+decrypt "ibm" 1
+output: hal
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "hal" 1
+output: ibm
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "hal" 0
+output: hal
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "hal" 26
+output: hal
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "007" 2
+output: 007
+
+---------------------
+---------------------
+success!
+erlang
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output: xyzabcdefghijklmnopqrstuvw
+
+---------------------
+---------------------
+success!
+erlang
+decrypt "genivf" 13
+output: travis
+
+---------------------
+---------------------
+success!
+erlang
+decrypt "{" 13
+output: {
+
+---------------------
+---------------------
+success!
+erlang
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+output: Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes.
+
+---------------------
+---------------------
+success!
+erlang
+solve "hal"
+output: gzk
+fyj
+exi
+dwh
+cvg
+buf
+ate
+zsd
+yrc
+xqb
+wpa
+voz
+uny
+tmx
+slw
+rkv
+qju
+pit
+ohs
+ngr
+mfq
+lep
+kdo
+jcn
+ibm
+hal
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "HAL" 1
+output:  IBM
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "h%al" 1
+output:  i%bm
+
+---------------------
+---------------------
+success!
+fortran
+decrypt "@" 13
+output:  @
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "hal" 27
+output:  ibm
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "hal hal" 1
+output:  ibm ibm
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "h,al" 1
+output:  i,bm
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "travis" 13
+output:  genivf
+
+---------------------
+---------------------
+success!
+fortran
+decrypt "ibm" 1
+output:  hal
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "hal" 1
+output:  ibm
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "hal" 0
+output:  hal
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "hal" 26
+output:  hal
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "007" 2
+output:  007
+
+---------------------
+---------------------
+success!
+fortran
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output:  xyzabcdefghijklmnopqrstuvw
+
+---------------------
+---------------------
+success!
+fortran
+decrypt "genivf" 13
+output:  travis
+
+---------------------
+---------------------
+success!
+fortran
+decrypt "{" 13
+output:  {
+
+---------------------
+---------------------
+success!
+fortran
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+output:  Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes.
+
+---------------------
+---------------------
+success!
+fortran
+solve "hal"
+output:  gzk
+ fyj
+ exi
+ dwh
+ cvg
+ buf
+ ate
+ zsd
+ yrc
+ xqb
+ wpa
+ voz
+ uny
+ tmx
+ slw
+ rkv
+ qju
+ pit
+ ohs
+ ngr
+ mfq
+ lep
+ kdo
+ jcn
+ ibm
+ hal
+    
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "HAL" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"IBM"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "h%al" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"i%bm"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+decrypt "@" 13
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"@"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "hal" 27
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"ibm"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "hal hal" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"ibm ibm"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "h,al" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"i,bm"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "travis" 13
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"genivf"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+decrypt "ibm" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"hal"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "hal" 1
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"ibm"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "hal" 0
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"hal"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "hal" 26
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"hal"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "007" 2
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"007"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"xyzabcdefghijklmnopqrstuvw"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+decrypt "genivf" 13
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"travis"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+decrypt "{" 13
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"{"
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+"Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes."
+Bye.
+
+---------------------
+---------------------
+success!
+lisp
+solve "hal"
+output:   i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.48 (2009-07-28) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2009
+
+Type :h and hit Enter for context help.
+
+;; Loading file ceaser.lsp ...
+;; Loaded file ceaser.lsp
+hal
+gzk
+fyj
+exi
+dwh
+cvg
+buf
+ate
+zsd
+yrc
+xqb
+wpa
+voz
+uny
+tmx
+slw
+rkv
+qju
+pit
+ohs
+ngr
+mfq
+lep
+kdo
+jcn
+ibm
+NIL
+Bye.
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "HAL" 1
+output: IBM
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "h%al" 1
+output: i%bm
+
+---------------------
+---------------------
+success!
+pascal
+decrypt "@" 13
+output: @
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "hal" 27
+output: ibm
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "hal hal" 1
+output: ibm ibm
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "h,al" 1
+output: i,bm
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "travis" 13
+output: genivf
+
+---------------------
+---------------------
+success!
+pascal
+decrypt "ibm" 1
+output: hal
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "hal" 1
+output: ibm
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "hal" 0
+output: hal
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "hal" 26
+output: hal
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "007" 2
+output: 007
+
+---------------------
+---------------------
+success!
+pascal
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output: xyzabcdefghijklmnopqrstuvw
+
+---------------------
+---------------------
+success!
+pascal
+decrypt "genivf" 13
+output: travis
+
+---------------------
+---------------------
+success!
+pascal
+decrypt "{" 13
+output: {
+
+---------------------
+---------------------
+success!
+pascal
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+output: Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes.
+
+---------------------
+---------------------
+success!
+pascal
+solve "hal"
+output: \nhal\ngzk\nfyj\nexi\ndwh\ncvg\nbuf\nate\nzsd\nyrc\nxqb\nwpa\nvoz\nuny\ntmx\nslw\nrkv\nqju\npit\nohs\nngr\nmfq\nlep\nkdo\njcn\nibm
+
+---------------------
+---------------------
+success!
+scala
+encrypt "HAL" 1
+output: IBM
+
+---------------------
+---------------------
+success!
+scala
+encrypt "h%al" 1
+output: i%bm
+
+---------------------
+---------------------
+success!
+scala
+decrypt "@" 13
+output: @
+
+---------------------
+---------------------
+success!
+scala
+encrypt "hal" 27
+output: ibm
+
+---------------------
+---------------------
+Fail!
+scala
+encrypt "hal hal" 1
+expected: ibm ibm
+output: 
+---------------------
+---------------------
+success!
+scala
+encrypt "h,al" 1
+output: i,bm
+
+---------------------
+---------------------
+success!
+scala
+encrypt "travis" 13
+output: genivf
+
+---------------------
+---------------------
+success!
+scala
+decrypt "ibm" 1
+output: hal
+
+---------------------
+---------------------
+success!
+scala
+encrypt "hal" 1
+output: ibm
+
+---------------------
+---------------------
+success!
+scala
+encrypt "hal" 0
+output: hal
+
+---------------------
+---------------------
+success!
+scala
+encrypt "hal" 26
+output: hal
+
+---------------------
+---------------------
+success!
+scala
+encrypt "007" 2
+output: 007
+
+---------------------
+---------------------
+success!
+scala
+decrypt abcdefghijklmnopqrstuvwxyz 3
+output: xyzabcdefghijklmnopqrstuvw
+
+---------------------
+---------------------
+success!
+scala
+decrypt "genivf" 13
+output: travis
+
+---------------------
+---------------------
+success!
+scala
+decrypt "{" 13
+output: {
+
+---------------------
+---------------------
+Fail!
+scala
+encrypt "How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf." 13
+expected: Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes.
+output: 
+---------------------
+---------------------
+success!
+scala
+solve "hal"
+output: halgzkfyjexidwhcvgbufatezsdyrcxqbwpavozunytmxslwrkvqjupitohsngrmfqlepkdojcnibm
+
+---------------------
