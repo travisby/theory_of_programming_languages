@@ -28,7 +28,7 @@ Uses sysutils;
                     else if (ord(ourString[i]) >= lowerA) and (ord(ourString[i]) <= lowerZ) then
                         encrypt := encrypt + (chr((lowerA + ((ord(ourString[i]) - lowerA + key) mod 26))))
                     else
-                        encrypt := encrypt;
+                        encrypt := encrypt + ourString[i];
                     i := i + 1;
                 end;
 
