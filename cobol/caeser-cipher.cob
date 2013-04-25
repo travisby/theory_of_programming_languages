@@ -26,7 +26,6 @@
        01 EncKey       PIC 99.
        01 Temp         PIC A(50).
        PROCEDURE DIVISION USING User-String EncKey Temp.
-           ADD 1 TO EncKey
            CALL 'MAKE-CIPHER' USING
            BY CONTENT User-String EncKey
            BY REFERENCE Temp
@@ -40,7 +39,7 @@
        01 EncKey       PIC 99.
        01 Temp         PIC A(50).
        PROCEDURE DIVISION USING User-String EncKey Temp.
-           SUBTRACT EncKey FROM 27 GIVING EncKey
+           SUBTRACT EncKey FROM 26 GIVING EncKey
            CALL 'MAKE-CIPHER' USING
            BY CONTENT User-String EncKey
            BY REFERENCE Temp
@@ -228,6 +227,6 @@
        SET EncKey TO FUNCTION ABS (EncKey)
        SET EncKey TO FUNCTION MOD (EncKey, 26)
        INSPECT User-String
-           CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
+           CONVERTING Alpha-String(1) TO Alpha-String(EncKey + 1)
            MOVE User-String TO Temp
            EXIT PROGRAM.
