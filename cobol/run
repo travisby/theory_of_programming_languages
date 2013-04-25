@@ -1,0 +1,2 @@
+#!/bin/sh
+./caeser-cipher $1 $2 $3
