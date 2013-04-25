@@ -1,5 +1,5 @@
 -module(ceaser).
--export([encrypt/2, decrypt/2]).
+-export([encrypt/2, decrypt/2, solve/1]).
 
 encrypt(Str, Key) -> lists:map(fun(Char) -> encrypt_one(Char, Key) end, Str).
 decrypt(Str, Key) -> encrypt(Str, 26 - Key).
@@ -15,4 +15,4 @@ encrypt_one(Char, _) -> Char.
 find_alphabet_start(Char) when ($a =< Char) and (Char =< $z) -> $a;
 find_alphabet_start(Char) when ($A =< Char) and (Char =< $Z) -> $A.
 
-solve(Str) -> lists:map(fun(Key) -> decrypt(Str, Key) end, Str).
+solve(Str) -> lists:map(fun(Key) -> decrypt(Str, Key) end, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]).
