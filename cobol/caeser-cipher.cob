@@ -47,6 +47,146 @@
            EXIT PROGRAM.
 
        IDENTIFICATION DIVISION.
+       PROGRAM-ID. SOLVE.
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 User-String  PIC A(50).
+       01 EncKey       PIC 99.
+       01 Temp         PIC A(50).
+       PROCEDURE DIVISION USING User-String EncKey Temp.
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+           DISPLAY Temp
+           ADD 1 TO EncKey
+           CALL 'MAKE-CIPHER' USING
+           BY CONTENT User-String EncKey
+           BY REFERENCE Temp
+
+           EXIT PROGRAM.
+
+       IDENTIFICATION DIVISION.
        PROGRAM-ID. MAKE-CIPHER.
        DATA DIVISION.
        LOCAL-STORAGE SECTION.
