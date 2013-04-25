@@ -3,12 +3,15 @@ import os
 
 test_cases = {
     'encrypt "hal" 1': 'ibm',
-    'encrypt "HAL" 1': 'IBM',
     'decrypt "ibm" 1':  'hal',
-    'decrypt "IBM" 1':  'HAL',
+    'encrypt "HAL" 1': 'IBM',
     'encrypt "hal hal" 1': 'ibm ibm',
     'encrypt "007" 2': '007',
     'encrypt "hal" 26': 'hal',
+    'encrypt "hal" 27': 'ibm',
+    'decrypt abcdefghijklmnopqrstuvwxyz 3': 'xyzabcdefghijklmnopqrstuvw',
+    'encrypt "h%al" 1': 'i%bm',
+    'encrypt "h,al" 1': 'i,bm',
 }
 directories = [
     'cobol',
