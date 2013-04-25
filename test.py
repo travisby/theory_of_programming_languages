@@ -6,7 +6,6 @@ test_cases = {
     'encrypt "HAL" 1': 'IBM',
     'decrypt "ibm" 1':  'hal',
     'decrypt "IBM" 1':  'HAL',
-    'encrypt "words with spaces"  5': "nfiuj nzky jgrtvj",
 }
 directories = [
     'cobol',
