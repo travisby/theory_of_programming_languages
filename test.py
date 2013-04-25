@@ -3,6 +3,7 @@ import os
 
 test_cases = {
     'encrypt "hal" 1': 'ibm',
+    'encrypt "hal" 0': 'hal',
     'decrypt "ibm" 1':  'hal',
     'encrypt "HAL" 1': 'IBM',
     'encrypt "hal hal" 1': 'ibm ibm',
