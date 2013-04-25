@@ -33,9 +33,9 @@ def solve (str: String) : String = {
 }
 
 if (args(0) == "encrypt") {
-    println(encrypt(args(0), args(1) toInt))
+    println(encrypt(args(1), args(2) toInt))
 } else if (args(0) == "decrypt") {
-    println(decrypt(args(0), args(1) toInt))
+    println(decrypt(args(1), args(2) toInt))
 } else {
-    println(solve(args(0)))
+    println(solve(args(1)))
 }
