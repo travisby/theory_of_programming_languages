@@ -14,22 +14,28 @@ PROGRAM ceaser
         END FUNCTION decrypt
         FUNCTION solve(string)
             character(*), intent(in) :: string
-            character(LEN=LEN_TRIM(string)) ::  solved
+            character(LEN=LEN_TRIM(string)) ::  solve
         END FUNCTION solve
     END INTERFACE
 
     character(100)  :: str
     integer         :: key
-    character(100)  :: encrypted
-    character(100)  :: decrypted
-    PRINT *, "Please enter a string with less than 100 characters."
-    READ (*, '(A)'), str
-    PRINT *, "Please enter your (integer) encryption key."
-    READ (*, *), key
-    encrypted = encrypt(TRIM(str), key)
-    PRINT *, encrypted
-    decrypted = decrypt(encrypted, key)
-    PRINT *, decrypted
+    character(100)  :: strKey
+    character(100)  :: func
+    character(100)  :: converted
+    CALL getarg(1, func)
+    CALL getarg(2, str)
+    IF (func .eq. "encrypt") THEN
+        CALL getarg(3, strKey)
+        Read( strKey, '(i10)' ) key
+        PRINT *, encrypt(TRIM(str), key) 
+    ELSE IF (func .eq. "decrypt") THEN
+        CALL getarg(3, strKey)
+        Read( strKey, '(i10)' ) key
+        PRINT *, decrypt(TRIM(str), key) 
+    ELSE
+        PRINT *, solve(TRIM(str)) 
+    END IF
 END PROGRAM ceaser
 
 FUNCTION encrypt(string, key) RESULT(encrypted)
@@ -104,4 +110,5 @@ FUNCTION solve(string) RESULT(solved)
     DO i = 0,25
         PRINT *, decrypt(string, i)
     END DO
+    solved = ""
 END FUNCTION solve
