@@ -28,3 +28,6 @@ TRIM(STRING)               Returns the character string STRING without
 Array Functions
 ===============
 SIZE(ARRAY, dim) is a function which returns the number of elements in an array ARRAY, if DIM is not given, and the number of elements in the relevant dimension if DIM is included.
+
+
+-- Compile to a file called "run"
