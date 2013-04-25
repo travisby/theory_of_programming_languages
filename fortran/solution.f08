@@ -86,12 +86,12 @@ FUNCTION decrypt(string, key) RESULT(decrypted)
             character(LEN=LEN_TRIM(string)) ::  encrypt
         END FUNCTION encrypt
     END INTERFACE
-    character(100) :: decrypted
+    character(*), intent(in) :: string
+    character(LEN=LEN_TRIM(string)) :: decrypted
     integer, intent(in) :: key
-    character(100), intent(in) :: string
 
     integer        :: i
-    decrypted = encrypt(string, -key)
+    decrypted = encrypt(string, 26 - key)
 END FUNCTION decrypt
 
 FUNCTION solve(string) RESULT(solved)
@@ -103,12 +103,13 @@ FUNCTION solve(string) RESULT(solved)
             character(LEN=LEN_TRIM(string)) ::  decrypt
         END FUNCTION decrypt
     END INTERFACE
-    character(100) :: solved
-    character(100), intent(in) :: string
+    character(*), intent(in) :: string
+    character(LEN=LEN_TRIM(string)) ::  solved
     integer        :: i
 
-    DO i = 0,25
-        PRINT *, decrypt(string, i)
+    DO i = 1,26
+        solved = decrypt(string, i)
+        PRINT *, TRIM(solved)
     END DO
     solved = ""
 END FUNCTION solve
