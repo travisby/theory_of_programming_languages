@@ -1,0 +1,27 @@
+#!/bin/sh
+singleQuote="'"
+doubleQuote='"'
+space=' '
+iofwrite='io:fwrite'
+openParen='('
+closeParen=')'
+comma=','
+newline='\n'
+str="$2"
+key="$3"
+function="ceaser:solve"
+myStr=$singleQuote$iofwrite$openParen$function$openParen$doubleQuote$str$newline$doubleQuote$closeParen$closeParen$singleQuote
+
+case "$1" in
+    "encrypt") 
+        function="ceaser:encrypt"
+        myStr=$singleQuote$iofwrite$openParen$function$openParen$doubleQuote$str$newline$doubleQuote$comma$space$key$closeParen$closeParen$singleQuote
+        ;;
+    "decrypt") 
+        function="ceaser:decrypt"
+        myStr=$singleQuote$iofwrite$openParen$function$openParen$doubleQuote$str$newline$doubleQuote$comma$space$key$closeParen$closeParen$singleQuote
+        ;;
+*)
+esac
+
+echo erl -noshell -eval  $myStr -s init stop | sh
