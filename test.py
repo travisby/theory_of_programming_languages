@@ -1,6 +1,7 @@
 import os
 
-
+bigstr1 = """How can you tell an extrovert from an introvert at NSA? Va gur ryringbef, gur rkgebireg ybbxf ng gur BGURE thlf fubrf."""
+bigstr2 = """Ubj pna lbh gryy na rkgebireg sebz na vagebireg ng AFN? In the elevators, the extrovert looks at the OTHER guys shoes."""
 test_cases = {
     'encrypt "hal" 1': 'ibm',
     'encrypt "hal" 0': 'hal',
@@ -13,8 +14,12 @@ test_cases = {
     'decrypt abcdefghijklmnopqrstuvwxyz 3': 'xyzabcdefghijklmnopqrstuvw',
     'encrypt "h%al" 1': 'i%bm',
     'encrypt "h,al" 1': 'i,bm',
+    'encrypt "travis" 13': 'genivf',
+    'decrypt "genivf" 13': 'travis',
+    'decrypt "{" 13': '{',
+    'decrypt "@" 13': '@',
+    'encrypt "%s" 13' % bigstr1: bigstr2
 }
-test_cases = {}
 
 solve_cases = {
     'solve "hal"': [
@@ -95,12 +100,10 @@ for directory in directories:
                 break
         if success:
             pass
-        """
             print '---------------------'
             print 'success!'
             print directory
             print case
             print 'output: %s' % result
             print '---------------------'
-        """
     os.chdir('../')
