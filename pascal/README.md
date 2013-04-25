@@ -9,3 +9,5 @@ Ease of use is great when you know the language, and even if you don't.  But for
 I'm estimating 5 hours of work on this.
 
 We will be using the Free Pascal Compiler, because it allows us to use a string in a for-in loop, where gpc did not
+
+It took one hour and ten minutes!
