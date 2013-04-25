@@ -1,0 +1,14 @@
+- solve("HAL")
+= ;
+val it =
+  ["HAL","GZK","FYJ","EXI","DWH","CVG","BUF","ATE","ZSD","YRC","XQB","WPA",
+     ...] : CharVector.vector list
+     - encrypt("HAL", 1")
+     = ;
+     stdIn:3.17-3.19 Error: unclosed string
+     - encrypt("HAL", 1);
+     val it = "IBM" : CharVector.vector
+     - decrypt("IBM", 1);
+     val it = "HAL" : CharVector.vector
+     - encrypt("WORD WITH SPACES", 1);
+     val it = "XPSE XJUI TQBDFT" : CharVector.vector
