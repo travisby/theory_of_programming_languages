@@ -225,6 +225,8 @@
        01 EncKey       PIC 99.
        01 Temp         PIC A(50).
        PROCEDURE DIVISION USING User-String EncKey Temp.
+       SET EncKey TO FUNCTION ABS (EncKey)
+       SET EncKey TO FUNCTION MOD (EncKey, 26)
        INSPECT User-String
            CONVERTING Alpha-String(1) TO Alpha-String(EncKey)
            MOVE User-String TO Temp
