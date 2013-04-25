@@ -31,3 +31,11 @@ def solve (str: String) : String = {
     val ourStringsList = numbers.map(mySolve)
     return ourStringsList.foldRight("")((x: String, y: String) => x ++ y)
 }
+
+if (args(0) == "encrypt") {
+    println(encrypt(args(0), args(1) toInt))
+} else if (args(0) == "decrypt") {
+    println(decrypt(args(0), args(1) toInt))
+} else {
+    println(solve(args(0)))
+}
