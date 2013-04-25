@@ -20,8 +20,6 @@
            DISPLAY "input = ", Temp.
            STOP RUN.
 
-
-
        IDENTIFICATION DIVISION.
        PROGRAM-ID. ENCRYPT.
        DATA DIVISION.
@@ -36,8 +34,6 @@
            BY REFERENCE Temp
            EXIT PROGRAM.
 
-
-
        IDENTIFICATION DIVISION.
        PROGRAM-ID. DECRYPT.
        DATA DIVISION.
@@ -51,10 +47,6 @@
            BY CONTENT User-String EncKey
            BY REFERENCE Temp
            EXIT PROGRAM.
-
-
-
-
 
        IDENTIFICATION DIVISION.
        PROGRAM-ID. MAKE-CIPHER.
